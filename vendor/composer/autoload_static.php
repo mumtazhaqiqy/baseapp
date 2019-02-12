@@ -8,6 +8,9 @@ class ComposerStaticInitbff68b1edebf4361ae76252c29a2fcc0
 {
     public static $files = array (
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
+        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
+        '25072dd6e2470089de65ae7bf11d3109' => __DIR__ . '/..' . '/symfony/polyfill-php72/bootstrap.php',
+        '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
     );
 
@@ -22,8 +25,15 @@ class ComposerStaticInitbff68b1edebf4361ae76252c29a2fcc0
         ),
         'S' => 
         array (
+            'Symfony\\Polyfill\\Php72\\' => 23,
+            'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Polyfill\\Ctype\\' => 23,
             'Symfony\\Component\\Yaml\\' => 23,
+            'Symfony\\Component\\VarDumper\\' => 28,
+        ),
+        'P' => 
+        array (
+            'Psr\\Log\\' => 8,
         ),
         'M' => 
         array (
@@ -34,6 +44,7 @@ class ComposerStaticInitbff68b1edebf4361ae76252c29a2fcc0
         array (
             'Doctrine\\Instantiator\\' => 22,
             'DeepCopy\\' => 9,
+            'DebugBar\\' => 9,
         ),
     );
 
@@ -48,6 +59,14 @@ class ComposerStaticInitbff68b1edebf4361ae76252c29a2fcc0
         array (
             0 => __DIR__ . '/..' . '/webmozart/assert/src',
         ),
+        'Symfony\\Polyfill\\Php72\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-php72',
+        ),
+        'Symfony\\Polyfill\\Mbstring\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
+        ),
         'Symfony\\Polyfill\\Ctype\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-ctype',
@@ -55,6 +74,14 @@ class ComposerStaticInitbff68b1edebf4361ae76252c29a2fcc0
         'Symfony\\Component\\Yaml\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/yaml',
+        ),
+        'Symfony\\Component\\VarDumper\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/var-dumper',
+        ),
+        'Psr\\Log\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
         ),
         'MatthiasMullie\\PathConverter\\' => 
         array (
@@ -72,6 +99,10 @@ class ComposerStaticInitbff68b1edebf4361ae76252c29a2fcc0
         array (
             0 => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy',
         ),
+        'DebugBar\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/maximebf/debugbar/src/DebugBar',
+        ),
     );
 
     public static $prefixesPsr0 = array (
@@ -87,6 +118,13 @@ class ComposerStaticInitbff68b1edebf4361ae76252c29a2fcc0
             'Prophecy\\' => 
             array (
                 0 => __DIR__ . '/..' . '/phpspec/prophecy/src',
+            ),
+        ),
+        'C' => 
+        array (
+            'Composer\\Installer' => 
+            array (
+                0 => __DIR__ . '/..' . '/compwright/codeigniter-installers/src',
             ),
         ),
     );

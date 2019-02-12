@@ -150,7 +150,7 @@ class Layout
     public function auth()
     {
         if (!$this->CI->aauth->is_loggedin()) {
-            redirect('login', 'refresh');
+            redirect('auth/login', 'refresh');
         }
     }
 
