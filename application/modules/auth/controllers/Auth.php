@@ -4,9 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Auth extends MY_Controller {
 
 	private $title = 'Login Page';
-
 	private $logo = 'mylogo';
-
 	private $login_view = 'login';
 
 	/**
@@ -16,8 +14,6 @@ class Auth extends MY_Controller {
 	 **/
 	public function login($identity = null, $password = null)
 	{
-			$this->load->helper('my_alert_helper');
-
 			if ($this->aauth->is_loggedin()) {
 					redirect(last_url());
 			}

@@ -13,6 +13,7 @@ class MY_Controller extends MX_Controller
 	{
 		parent::__construct();
 		$this->_hmvc_fixes();
+    $this->load->helper('my_alert_helper');
 	}
 
 	function _hmvc_fixes()
