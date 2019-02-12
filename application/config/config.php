@@ -23,7 +23,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = '';
+$domain = $_SERVER['HTTP_HOST'];
+$domain .= str_replace(basename($_SERVER['SCRIPT_NAME']), "", $_SERVER['SCRIPT_NAME']);
+$config['base_url'] = "http://" . $domain;
+if (!empty($_SERVER['HTTPS'])) {
+	$config['base_url'] = "https://" . $domain;
+}
+
 
 /*
 |--------------------------------------------------------------------------
@@ -136,7 +142,7 @@ $config['subclass_prefix'] = 'MY_';
 | Note: This will NOT disable or override the CodeIgniter-specific
 |	autoloading (application/config/autoload.php)
 */
-$config['composer_autoload'] = FALSE;
+$config['composer_autoload'] = 'vendor/autoload.php';
 
 /*
 |--------------------------------------------------------------------------
@@ -448,11 +454,11 @@ $config['global_xss_filtering'] = FALSE;
 | 'csrf_regenerate' = Regenerate token on every submission
 | 'csrf_exclude_uris' = Array of URIs which ignore CSRF checks
 */
-$config['csrf_protection'] = FALSE;
-$config['csrf_token_name'] = 'csrf_test_name';
-$config['csrf_cookie_name'] = 'csrf_cookie_name';
+$config['csrf_protection'] = TRUE;
+$config['csrf_token_name'] = '__baseapp_token';
+$config['csrf_cookie_name'] = '__baseapp_token';
 $config['csrf_expire'] = 7200;
-$config['csrf_regenerate'] = TRUE;
+$config['csrf_regenerate'] = FALSE;
 $config['csrf_exclude_uris'] = array();
 
 /*
